@@ -6,10 +6,12 @@ import (
 	"time"
 
 	"github.com/astaxie/beego"
+	"github.com/dgrijalva/jwt-go"
 )
 
 type UserController struct {
 	beego.Controller
+	BaseController
 }
 
 //登录
@@ -32,7 +34,24 @@ func (user *UserController) Login() {
 	}
 	if users != nil {
 		if users.Password == password {
-			user.Data["json"] = map[string]interface{}{"status": 200, "user": users, "time": time.Now().Format("2006-01-02 15:04:05")}
+			claims := make(jwt.MapClaims)
+			claims["username"] = username
+			claims["exp"] = time.Now().Add(time.Hour * 480).Unix() //20天有效期，过期需要重新登录获取token
+			token := jwt.NewWithClaims(jwt.SigningMethodHS256, claims)
+
+			// 使用自定义字符串加密 and get the complete encoded token as a string
+			tokenString, err := token.SignedString([]byte("mykey"))
+			if err != nil {
+				beego.Error("jwt.SignedString:", err)
+				//user.RetError(errSystem)
+				return
+			}
+			user.Data["json"] = map[string]interface{}{"status": 200, "message": "登录成功 ", "token": tokenString, "time": time.Now().Format("2006-01-02 15:04:05")}
+			user.ServeJSON()
+			return
+		} else {
+			user.Data["json"] = map[string]interface{}{"status": 400, "message": "账号不存在或者密码错误 ", "time": time.Now().Format("2006-01-02 15:04:05")}
+			// user.Data["json"] = map[string]interface{}{"status": 200, "user": users, "time": time.Now().Format("2006-01-02 15:04:05")}
 			user.ServeJSON()
 			return
 		}
@@ -47,7 +66,7 @@ func (this *UserController) Register() {
 	tel := requestBody["tel"]
 	Password := requestBody["password"]
 	Name := requestBody["username"]
-	ID := time.Now().Format("2006-01-02 15:04:05")
+	ID := 1
 
 	if tel == "" || Password == "" || Name == "" { //如果手机号为空
 		this.Data["json"] = map[string]interface{}{"status": 400, "msg": "账号或密码不为空！", "time": time.Now().Format("2006-01-02 15:04:05")}
@@ -55,18 +74,19 @@ func (this *UserController) Register() {
 		return
 	}
 	//判断该手机号是否已经注册
-	// user, err := models.GetUserByTel(tel)
-	// if err != nil { //如果有错误
-	// 	beego.Info(err)
-	// 	this.Data["json"] = map[string]interface{}{"status": 400, "msg": err.Error(), "time": time.Now().Format("2006-01-02 15:04:05")}
-	// 	this.ServeJSON()
-	// 	return
-	// }
-	// if user != nil { //如果有该用户
-	// 	this.Data["json"] = map[string]interface{}{"status": 400, "msg": "该手机号已注册！", "time": time.Now().Format("2006-01-02 15:04:05")}
-	// 	this.ServeJSON()
-	// 	return
-	// }
+	user, err := models.GetUserByTel(tel)
+	if err != nil { //如果有错误
+		beego.Info(err)
+		this.Data["json"] = map[string]interface{}{"status": 400, "msg": err.Error(), "time": time.Now().Format("2006-01-02 15:04:05")}
+		this.ServeJSON()
+		return
+	}
+	if user != nil { //如果有该用户
+		this.Data["json"] = map[string]interface{}{"status": 400, "msg": "该手机号已注册！", "time": time.Now().Format("2006-01-02 15:04:05")}
+		this.ServeJSON()
+		return
+	}
+
 	id, errs := models.InsertUser(tel, Name, Password, ID)
 	if errs == nil {
 		this.Data["json"] = map[string]interface{}{"status": 200, "msg": "注册成功", "user": id}
@@ -74,4 +94,19 @@ func (this *UserController) Register() {
 		return
 	}
 
+}
+func (this *UserController) GetAllUser() {
+	token, e := this.ParseToken()
+
+	claims, ok := token.Claims.(jwt.MapClaims)
+	if !ok {
+
+		return
+	}
+	if e == nil {
+		var user string = claims["username"].(string)
+		this.Data["json"] = map[string]interface{}{"message": "xas", "user": user}
+		this.ServeJSON()
+		return
+	}
 }

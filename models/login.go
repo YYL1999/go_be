@@ -1,9 +1,6 @@
 package models
 
 import (
-	"fmt"
-	"strconv"
-
 	"github.com/astaxie/beego/orm"
 )
 
@@ -11,7 +8,7 @@ type User struct {
 	ID       int `orm:"column(id);pk"`
 	Name     string
 	Password string
-	Tel      int
+	Tel      string
 }
 
 func init() {
@@ -39,7 +36,7 @@ func GetUserByName(name string) (*User, error) {
 	o := orm.NewOrm()
 	user := new(User)
 	qs := o.QueryTable("user")
-	err := qs.One(user)
+	err := qs.Filter("name", name).One(user)
 	return user, err
 }
 
@@ -53,18 +50,13 @@ func GetUserByTel(tel string) (*User, error) {
 }
 
 //插入新用户
-func InsertUser(tel string, name string, password string, id string) (*User, error) {
-	b, error := strconv.Atoi(tel)
-	c, error := strconv.Atoi(id)
-	if error != nil {
-		fmt.Println("字符串转换成整数失败")
-	}
+func InsertUser(tel string, name string, password string, id int) (*User, error) {
 	o := orm.NewOrm()
 	var user User
 	user.Name = name
 	user.Password = password
-	user.ID = c
-	user.Tel = b
+	user.ID = id
+	user.Tel = tel
 	_, err := o.Insert(&user)
 	return nil, err
 }
