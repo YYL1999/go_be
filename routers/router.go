@@ -16,6 +16,7 @@ import (
 func init() {
 	beego.Router("/register", &controllers.UserController{}, "POST:Register")
 	beego.Router("/login", &controllers.UserController{}, "POST:Login")
+	beego.Router("/getall", &controllers.UserController{}, "GET:GetAllUser")
 	ns := beego.NewNamespace("/v1",
 		beego.NSNamespace("/object",
 			beego.NSInclude(

@@ -12,6 +12,7 @@ func init() {
 	orm.RegisterDataBase("default", "mysql",
 		"root:211314lpf@@tcp(192.168.10.131:3306)/golang?charset=utf8", 30)
 	orm.RunSyncdb("default", false, true)
+
 }
 func main() {
 	orm.Debug = true
