@@ -18,24 +18,6 @@ func init() {
 
     beego.GlobalControllerRouter["go_demo/controllers:ObjectController"] = append(beego.GlobalControllerRouter["go_demo/controllers:ObjectController"],
         beego.ControllerComments{
-            Method: "GetAll",
-            Router: `/`,
-            AllowHTTPMethods: []string{"get"},
-            MethodParams: param.Make(),
-            Filters: nil,
-            Params: nil})
-
-    beego.GlobalControllerRouter["go_demo/controllers:ObjectController"] = append(beego.GlobalControllerRouter["go_demo/controllers:ObjectController"],
-        beego.ControllerComments{
-            Method: "Get",
-            Router: `/:objectId`,
-            AllowHTTPMethods: []string{"get"},
-            MethodParams: param.Make(),
-            Filters: nil,
-            Params: nil})
-
-    beego.GlobalControllerRouter["go_demo/controllers:ObjectController"] = append(beego.GlobalControllerRouter["go_demo/controllers:ObjectController"],
-        beego.ControllerComments{
             Method: "Put",
             Router: `/:objectId`,
             AllowHTTPMethods: []string{"put"},
