@@ -17,17 +17,9 @@ func init() {
 	beego.Router("/register", &controllers.UserController{}, "POST:Register")
 	beego.Router("/login", &controllers.UserController{}, "POST:Login")
 	beego.Router("/getall", &controllers.UserController{}, "GET:GetAllUser")
-	ns := beego.NewNamespace("/v1",
-		beego.NSNamespace("/object",
-			beego.NSInclude(
-				&controllers.ObjectController{},
-			),
-		),
-		beego.NSNamespace("/user",
-			beego.NSInclude(
-				&controllers.UserController{},
-			),
-		),
-	)
-	beego.AddNamespace(ns)
+	beego.Router("/addarticle", &controllers.ArticleController{}, "POST:AddArticle")
+	beego.Router("/getallarticle", &controllers.ArticleController{}, "GET:GetAllArticle")
+	beego.Router("/getarticle/?:id", &controllers.ArticleController{}, "GET:GetOneArticle")
+	beego.Router("/updatearticle", &controllers.ArticleController{}, "POST:UpdateArticle")
+	beego.Router("/delete", &controllers.ArticleController{}, "POST:DeleteArticle")
 }
