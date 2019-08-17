@@ -15,7 +15,7 @@ import (
 
 func init() {
 	beego.Router("/register", &controllers.UserController{}, "POST:Register")
-	beego.Router("/login", &controllers.UserController{}, "POST:Login")
+	beego.Router("/login", &controllers.UserController{})
 	beego.Router("/getall", &controllers.UserController{}, "GET:GetAllUser")
 	beego.Router("/addarticle", &controllers.ArticleController{}, "POST:AddArticle")
 	beego.Router("/getallarticle", &controllers.ArticleController{}, "GET:GetAllArticle")

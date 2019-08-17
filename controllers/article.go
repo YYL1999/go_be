@@ -2,7 +2,9 @@ package controllers
 
 import (
 	"encoding/json"
+	"fmt"
 	"go_demo/models"
+	"go_demo/utils"
 
 	"github.com/astaxie/beego"
 )
@@ -27,6 +29,15 @@ func (this *ArticleController) AddArticle() {
 
 //获取所有文章
 func (this *ArticleController) GetAllArticle() {
+	token := this.Ctx.Input.Header("token")
+	if len(token) == 0 {
+		return
+	}
+	ok := utils.CheckJwt(token)
+	fmt.Println(ok, token)
+	if !ok {
+		return
+	}
 	article, err := models.GetAll()
 	if err == nil {
 		this.Data["json"] = map[string]interface{}{"status": 200, "msg": article}
