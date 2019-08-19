@@ -15,11 +15,11 @@ import (
 
 func init() {
 	beego.Router("/register", &controllers.UserController{}, "POST:Register")
-	beego.Router("/login", &controllers.UserController{}, "POST:Login")
+	beego.Router("/login", &controllers.UserController{})
 	beego.Router("/getall", &controllers.UserController{}, "GET:GetAllUser")
 	beego.Router("/addarticle", &controllers.ArticleController{}, "POST:AddArticle")
 	beego.Router("/getallarticle", &controllers.ArticleController{}, "GET:GetAllArticle")
 	beego.Router("/getarticle/?:id", &controllers.ArticleController{}, "GET:GetOneArticle")
 	beego.Router("/updatearticle", &controllers.ArticleController{}, "PUT:UpdateArticle")
-	beego.Router("/delete", &controllers.ArticleController{}, "DELETE:DeleteArticle")
+	beego.Router("/delete/:id", &controllers.ArticleController{}, "DELETE:DeleteArticle")
 }

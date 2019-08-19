@@ -7,7 +7,7 @@ import (
 )
 
 type Article struct {
-	Id       string `orm:"column(id);pk"`
+	Id       int64 `orm:"column(id);pk"`
 	Content  string
 	Title    string
 	OkNumber int64
@@ -39,7 +39,7 @@ func GetAll() ([]Article, error) {
 }
 
 //根据ID获取文章
-func GetOne(Id string) (*Article, error) {
+func GetOne(Id int64) (*Article, error) {
 	o := orm.NewOrm()
 	article := new(Article)
 	qs := o.QueryTable("article")
@@ -48,7 +48,7 @@ func GetOne(Id string) (*Article, error) {
 }
 
 //根据ID修改文章
-func UpdateOne(Id string, Momment string, Title string) Article {
+func UpdateOne(Id int64, Momment string, Title string) Article {
 	o := orm.NewOrm()
 	article := Article{Id: Id}
 	article.Momment = Momment
@@ -59,10 +59,9 @@ func UpdateOne(Id string, Momment string, Title string) Article {
 }
 
 //根据ID删除文章
-func DeleteOne(Id string) Article {
+func DeleteOne(Id int64) Article {
 	o := orm.NewOrm()
 	article := Article{Id: Id}
 	o.Delete(&article)
-	fmt.Println(article)
 	return article
 }
