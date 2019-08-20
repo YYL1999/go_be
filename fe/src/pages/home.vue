@@ -47,6 +47,9 @@
   </div>
 </template>
 <script>
+import { mapActions,mapState } from 'vuex'
+import {getAllArticle} from '../api/article'
+import axios from 'axios'
 export default {
   data() {
     return {
@@ -85,6 +88,20 @@ export default {
         }
       ]
     };
+  },
+  computed: {
+    // ...mapState(["list"])
+  },
+  methods : {
+    getArticle() {
+       axios.get('/getallarticle').then((response)=> {
+         console.log(response)
+       })
+       
+    }
+  },
+  mounted () {
+    this.getArticle()
   }
 };
 </script>
