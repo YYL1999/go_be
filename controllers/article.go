@@ -85,8 +85,7 @@ func (this *ArticleController) UpdateArticle() {
 	if err != nil {
 		return
 	}
-	content := requestBody["content"]
-	article := models.UpdateOne(int64(id), title, content)
+	article := models.UpdateOne(int64(id), title)
 	this.Data["json"] = map[string]interface{}{"status": 200, "msg": article}
 	this.ServeJSON()
 	return

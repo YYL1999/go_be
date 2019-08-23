@@ -1,0 +1,26 @@
+2019/08/23 11:02:45.171 [I] [logs.go:37]  program start···
+2019/08/23 11:02:45.177 [I] [app.go:215]  http server Running on http://:8088
+2019/08/23 11:03:00.394 [D] [router.go:925]  |            ::1|[97;42m 200 [0m|   3.963149ms|   match|[97;44m GET     [0m /getallarticle   r:/getallarticle
+2019/08/23 11:03:53.226 [D] [router.go:925]  |            ::1|[97;42m 200 [0m|  39.170549ms|   match|[97;41m DELETE  [0m /delete/120   r:/delete/:id
+2019/08/23 11:04:00.927 [D] [router.go:925]  |            ::1|[97;42m 200 [0m|    769.815µs|   match|[97;44m GET     [0m /getallarticle   r:/getallarticle
+2019/08/23 11:06:39.851 [I] [logs.go:37]  program start···
+2019/08/23 11:06:39.857 [I] [app.go:215]  http server Running on http://:8088
+2019/08/23 11:06:39.857 [I] [admin.go:404]  Admin server Running on :8088
+2019/08/23 11:06:39.857 [C] [admin.go:413]  Admin ListenAndServe:  listen tcp :8088: bind: address already in use 9320
+2019/08/23 11:06:58.157 [D] [router.go:925]  |            ::1|[97;42m 200 [0m|   2.529509ms|   match|[97;44m GET     [0m /getallarticle   r:/getallarticle
+2019/08/23 11:12:11.768 [I] [logs.go:37]  program start···
+2019/08/23 11:12:11.772 [I] [app.go:215]  http server Running on http://:8088
+2019/08/23 11:12:11.772 [I] [admin.go:404]  Admin server Running on :8088
+2019/08/23 11:12:11.772 [C] [admin.go:413]  Admin ListenAndServe:  listen tcp :8088: bind: address already in use 9970
+2019/08/23 11:24:12.227 [I] [logs.go:37]  program start···
+2019/08/23 11:24:12.233 [I] [admin.go:404]  Admin server Running on :8088
+2019/08/23 11:24:12.233 [I] [app.go:215]  http server Running on http://:8088
+2019/08/23 11:24:12.233 [C] [admin.go:413]  Admin ListenAndServe:  listen tcp :8088: bind: address already in use 11782
+2019/08/23 11:25:00.900 [I] [logs.go:37]  program start···
+2019/08/23 11:25:00.905 [I] [app.go:215]  http server Running on http://:8088
+2019/08/23 11:25:00.905 [I] [admin.go:404]  Admin server Running on :8088
+2019/08/23 11:25:00.906 [C] [admin.go:413]  Admin ListenAndServe:  listen tcp :8088: bind: address already in use 11896
+2019/08/23 11:25:16.185 [I] [logs.go:37]  program start···
+2019/08/23 11:25:16.190 [I] [app.go:215]  http server Running on http://:8088
+2019/08/23 11:25:16.190 [I] [admin.go:404]  Admin server Running on :8088
+2019/08/23 11:25:16.190 [C] [app.go:232]  ListenAndServe:  listen tcp :8088: bind: address already in use

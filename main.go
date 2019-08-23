@@ -1,6 +1,7 @@
 package main
 
 import (
+	"go_demo/logs"
 	_ "go_demo/routers"
 
 	"github.com/astaxie/beego"
@@ -22,5 +23,6 @@ func main() {
 		beego.BConfig.WebConfig.DirectoryIndex = true
 		beego.BConfig.WebConfig.StaticDir["/swagger"] = "swagger"
 	}
+	logs.StartLog()
 	beego.Run()
 }

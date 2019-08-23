@@ -11,7 +11,7 @@ type Article struct {
 	Content  string
 	Title    string
 	OkNumber int64
-	Momment  string
+	Momment
 }
 
 func init() {
@@ -48,10 +48,9 @@ func GetOne(Id int64) (*Article, error) {
 }
 
 //根据ID修改文章
-func UpdateOne(Id int64, Momment string, Title string) Article {
+func UpdateOne(Id int64, Title string) Article {
 	o := orm.NewOrm()
 	article := Article{Id: Id}
-	article.Momment = Momment
 	article.Title = Title
 	o.Update(&article)
 	fmt.Println(article)
