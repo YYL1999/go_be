@@ -46,18 +46,21 @@ func (this *ArticleController) AddArticle() {
 func (this *ArticleController) GetAllArticle() {
 	response := make(map[string]interface{})
 	token := this.Ctx.Input.Header("token")
+	fmt.Println(token)
 	if len(token) == 0 {
 		response["code"] = 401
 		response["msg"] = "没有权限"
+
+	} else {
+		ok := utils.CheckJwt(token)
+		if !ok {
+			response["code"] = 401
+			response["msg"] = "权限已过期，请重新登录"
+		}
+		article := services.GetAllArticle()
+		response["code"] = 200
+		response["msg"] = article
 	}
-	ok := utils.CheckJwt(token)
-	if !ok {
-		response["code"] = 401
-		response["msg"] = "权限已过期，请重新登录"
-	}
-	article := services.GetAllArticle()
-	response["code"] = 200
-	response["msg"] = article
 	this.Data["json"] = response
 	this.ServeJSON()
 }
@@ -82,8 +85,7 @@ func (this *ArticleController) UpdateArticle() {
 	if err != nil {
 		return
 	}
-	content := requestBody["content"]
-	article := models.UpdateOne(int64(id), title, content)
+	article := models.UpdateOne(int64(id), title)
 	this.Data["json"] = map[string]interface{}{"status": 200, "msg": article}
 	this.ServeJSON()
 	return
