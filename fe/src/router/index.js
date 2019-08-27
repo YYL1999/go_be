@@ -15,9 +15,8 @@ export default new Router ({
             component: loadView('home')
         },
         {
-            path:'/hello',
-            name:"HELLO",
-            component: loadView('hello')
+             path:'/article/:id',
+             component:loadView('article')
         },
         {
             path:'/notfound',

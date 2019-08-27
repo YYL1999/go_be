@@ -19,7 +19,6 @@ func DeleteArticleByID(id int64) models.Article {
 }
 func GetAllArticle() (article []models.Article) {
 	article, err := models.GetAll()
-	fmt.Println(article)
 	if err != nil {
 		return
 	}

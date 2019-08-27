@@ -94,8 +94,12 @@ export default {
   },
   methods : {
     getArticle() {
-       axios.get('/getallarticle').then((response)=> {
-         console.log(response)
+       axios.get('http://0.0.0.0:8088/getallarticle'
+       ).then((response)=> {
+         return response.data
+       }).then((data) => {
+        this.list = data.msg
+        console.log(data)
        })
        
     }
