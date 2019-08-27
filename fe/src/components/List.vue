@@ -1,7 +1,7 @@
 <template>
   <div class="bl-list">
-      <h1>{{item.title}}</h1> 
-      <p>{{item.message}}</p>
+      <h1>{{item.Title}}</h1> 
+      <p>{{item.Content}}</p>
   </div>
 </template>
 <script>
@@ -29,6 +29,9 @@ export default {
     }
     p{
         font-size: 16px;
+        padding-top: 5px;
+        height: 24px;
+        overflow: hidden;
     }
 }
 </style>

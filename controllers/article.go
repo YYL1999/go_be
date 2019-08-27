@@ -17,12 +17,19 @@ type ArticleController struct {
 
 //添加文章
 func (this *ArticleController) AddArticle() {
-	token := this.Ctx.Input.Header("token")
-	ifToken := utils.CheckJwt(token)
-	if !ifToken {
-		return
-	}
+	this.Ctx.Output.Header("Access-Control-Allow-Origin", "*")
+	this.Ctx.Output.Header("Access-Control-Allow-Method", "*")
 	response := make(map[string]interface{})
+	// token := this.Ctx.Input.Header("token")
+	// if len(token) == 0 {
+	// 	response["code"] = 401
+	// 	response["msg"] = "没有权限"
+	// }
+	// ifToken := utils.CheckJwt(token)
+	// fmt.Println("nihao")
+	// if !ifToken {
+	// 	return
+	// }
 	var requestBody map[string]string
 	json.Unmarshal(this.Ctx.Input.RequestBody, &requestBody)
 	title := requestBody["title"]
@@ -39,34 +46,40 @@ func (this *ArticleController) AddArticle() {
 	}
 	this.Data["json"] = response
 	this.ServeJSON()
-	return
 }
 
 //获取所有文章
 func (this *ArticleController) GetAllArticle() {
+	this.Ctx.Output.Header("Access-Control-Allow-Origin", "*")
+	this.Ctx.Output.Header("Access-Control-Allow-Method", "*")
 	response := make(map[string]interface{})
-	token := this.Ctx.Input.Header("token")
-	fmt.Println(token)
-	if len(token) == 0 {
-		response["code"] = 401
-		response["msg"] = "没有权限"
+	article := services.GetAllArticle()
+	response["code"] = 200
+	response["msg"] = article
+	// token := this.Ctx.Input.Header("token")
+	// fmt.Println(token)
+	// if len(token) == 0 {
+	// 	response["code"] = 401
+	// 	response["msg"] = "没有权限"
 
-	} else {
-		ok := utils.CheckJwt(token)
-		if !ok {
-			response["code"] = 401
-			response["msg"] = "权限已过期，请重新登录"
-		}
-		article := services.GetAllArticle()
-		response["code"] = 200
-		response["msg"] = article
-	}
+	// } else {
+	// 	ok := utils.CheckJwt(token)
+	// 	if !ok {
+	// 		response["code"] = 401
+	// 		response["msg"] = "权限已过期，请重新登录"
+	// 	}
+	// 	article := services.GetAllArticle()
+	// 	response["code"] = 200
+	// 	response["msg"] = article
+	// }
 	this.Data["json"] = response
 	this.ServeJSON()
 }
 
 //根据ID获取单个文章
 func (this *ArticleController) GetOneArticle() {
+	this.Ctx.Output.Header("Access-Control-Allow-Origin", "*")
+	this.Ctx.Output.Header("Access-Control-Allow-Method", "*")
 	id, err := strconv.Atoi(this.Ctx.Input.Param(":id"))
 	article, err := models.GetOne(int64(id))
 	if err == nil {

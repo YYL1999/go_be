@@ -34,9 +34,10 @@
   }
 }
 .bl-nav-nav{
-    width: 100%;
+    width: 600px;
     display: flex;
     justify-content: space-between;
+    margin: 0 auto;
     li{
         width:100px;
         font-size: 18px;
