@@ -171,3 +171,24 @@
 2019/08/23 14:13:56.167 [D] [router.go:925]  |      127.0.0.1|[97;42m 200 [0m|    520.969µs|   match|[97;44m GET     [0m /getarticle/126   r:/getarticle/?:id
 2019/08/23 14:14:15.216 [D] [router.go:925]  |      127.0.0.1|[97;42m 200 [0m|    359.876µs|   match|[97;44m GET     [0m /getarticle/126   r:/getarticle/?:id
 2019/08/23 14:15:15.223 [D] [router.go:925]  |      127.0.0.1|[97;42m 200 [0m|   1.690118ms|   match|[97;44m GET     [0m /getarticle/127   r:/getarticle/?:id
+2019/08/27 14:07:02.175 [I] [logs.go:37]  program start···
+2019/08/27 14:07:02.234 [I] [app.go:215]  http server Running on http://:8088
+2019/08/27 14:07:13.748 [D] [router.go:925]  |      127.0.0.1|[97;42m 200 [0m| 221.187758ms|   match|[97;44m GET     [0m /getallarticle   r:/getallarticle
+2019/08/27 14:07:52.080 [D] [router.go:925]  |      127.0.0.1|[97;42m 200 [0m| 130.948058ms|   match|[97;44m GET     [0m /getarticle/127   r:/getarticle/?:id
+2019/08/27 14:11:07.542 [D] [router.go:925]  |      127.0.0.1|[97;42m 200 [0m|    639.429µs|   match|[97;44m GET     [0m /getallarticle   r:/getallarticle
+2019/08/27 14:22:43.750 [I] [logs.go:37]  program start···
+2019/08/27 14:22:43.755 [I] [app.go:215]  http server Running on http://:8088
+2019/08/27 14:23:00.541 [D] [router.go:925]  |      127.0.0.1|[97;42m 200 [0m|   3.996357ms|   match|[97;44m GET     [0m /getarticle/127   r:/getarticle/?:id
+2019/08/27 14:26:18.198 [I] [logs.go:37]  program start···
+2019/08/27 14:26:18.205 [I] [app.go:215]  http server Running on http://:8088
+2019/08/27 14:26:50.198 [I] [logs.go:37]  program start···
+2019/08/27 14:26:50.203 [I] [app.go:215]  http server Running on http://:8088
+2019/08/27 14:51:51.427 [I] [logs.go:37]  program start···
+2019/08/27 14:51:51.433 [I] [app.go:215]  http server Running on http://:8088
+2019/08/27 15:14:08.206 [I] [logs.go:37]  program start···
+2019/08/27 15:14:08.211 [I] [app.go:215]  http server Running on http://:8088
+2019/08/27 15:21:58.852 [I] [logs.go:37]  program start···
+2019/08/27 15:21:58.858 [I] [app.go:215]  http server Running on http://:8088
+2019/08/27 15:48:46.503 [D] [router.go:925]  |      127.0.0.1|[97;42m 200 [0m|    986.458µs|   match|[97;44m GET     [0m /getarticle/127   r:/getarticle/?:id
+2019/08/27 15:49:33.086 [D] [router.go:925]  |      127.0.0.1|[97;42m 200 [0m|    442.421µs|   match|[97;44m GET     [0m /getarticle/127   r:/getarticle/?:id
+2019/08/27 15:50:22.713 [D] [router.go:925]  |      127.0.0.1|[97;42m 200 [0m|    600.139µs|   match|[97;44m GET     [0m /getarticle/127   r:/getarticle/?:id

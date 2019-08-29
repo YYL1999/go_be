@@ -35,6 +35,10 @@ module.exports = {
         test: /\.less$/,
         loader: "style-loader!css-loader!less-loader",
         },
+        {
+          test: /\.scss$/,
+          loader: "style-loader!css-loader!scss-loader",
+          },
       {
         test: /\.vue$/,
         loader: 'vue-loader',
