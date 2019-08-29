@@ -1,7 +1,8 @@
-## 博客后端接口 
-Go开发 采用bego框架 
-## 数据库 
-目前使用MySQL 
+## 博客 
+### 前端 
+* Vue + Webpack + Element
+### 后端 
+* Go + Beego + Mysql + Redis
 ## 🔨使用 
 git clone https://github.com/YYL1999/go_be.git
-完整代码在dev分支
+

@@ -19,6 +19,10 @@ export default new Router ({
              component:loadView('article')
         },
         {
+            path:'/manage',
+            component:loadView('manage/index')
+        },
+        {
             path:'/notfound',
             name:'NotFound',
             component: loadView("404")
