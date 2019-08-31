@@ -9,6 +9,7 @@ Vue.use(Router)
 
 export default new Router ({
     linkActiveClass:'Active',
+    mode:"history",
     routes:[
         {
             path:'/',
@@ -16,6 +17,7 @@ export default new Router ({
         },
         {
              path:'/article/:id',
+             name:"article",
              component:loadView('article')
         },
         {

@@ -1,11 +1,10 @@
 <template>
     <div class="bolg-body">
-     <div class="article-main">
+     <div class="article-main" v-if="data">
        <h2 class="article-subtitile">{{data.Title}}</h2>
        <article class="editor-body">
         {{data.Content}}
        </article>
-
      </div>
     </div>
 </template>
@@ -18,7 +17,8 @@ export default {
        }
    },
    mounted () {
-     axios.get('http://0.0.0.0:8088/getarticle/127').then((response) => {
+     const id = this.$route.params.id
+     axios.get(`http://0.0.0.0:8088/getarticle/${id}`).then((response) => {
          return response.data
      }).then((data) => {
        this.data = data.msg
