@@ -1,7 +1,7 @@
 <template>
-  <div class="bl-list">
-      <h1>{{item.Title}}</h1> 
-      <p>{{item.Content}}</p>
+  <div class="bl-list" @click="handleClick">
+        <h1>{{item.Title}}</h1> 
+        <p>{{item.Content}}</p>
   </div>
 </template>
 <script>
@@ -9,6 +9,11 @@ export default {
   props: {
     item: {
       type: Object
+    }
+  },
+  methods: {
+    handleClick () {
+      this.$router.push(`article/${this.item.Id}`)
     }
   }
 };

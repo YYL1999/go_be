@@ -22,4 +22,6 @@ func init() {
 	beego.Router("/getarticle/?:id", &controllers.ArticleController{}, "GET:GetOneArticle")
 	beego.Router("/updatearticle", &controllers.ArticleController{}, "PUT:UpdateArticle")
 	beego.Router("/delete/:id", &controllers.ArticleController{}, "DELETE:DeleteArticle")
+	beego.Router("/gettag", &controllers.TagController{}, "GET:GetTag")
+	beego.Router("/settag",&controllers.TagController{},"POST:SetTag")
 }
