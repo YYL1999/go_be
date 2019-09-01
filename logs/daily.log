@@ -345,3 +345,159 @@
 2019/08/31 13:00:19.120 [D] [router.go:925]  |      127.0.0.1|[97;42m 200 [0m|   2.675521ms|   match|[97;44m GET     [0m /getarticle/127   r:/getarticle/?:id
 2019/08/31 13:03:38.095 [D] [router.go:925]  |            ::1|[97;42m 200 [0m|   1.277852ms|   match|[97;44m GET     [0m /gettag   r:/gettag
 2019/08/31 13:03:38.792 [D] [router.go:925]  |            ::1|[97;42m 200 [0m|    650.205µs|   match|[97;44m GET     [0m /gettag   r:/gettag
+2019/08/31 13:13:14.956 [I] [logs.go:37]  program start···
+2019/08/31 13:13:14.961 [I] [app.go:215]  http server Running on http://:8088
+2019/08/31 13:13:23.439 [D] [router.go:925]  |            ::1|[97;42m 200 [0m|   2.302414ms|   match|[97;44m GET     [0m /gettag   r:/gettag
+2019/08/31 13:14:55.228 [I] [logs.go:37]  program start···
+2019/08/31 13:14:55.233 [I] [app.go:215]  http server Running on http://:8088
+2019/08/31 13:14:59.575 [D] [router.go:925]  |            ::1|[97;42m 200 [0m|   2.144463ms|   match|[97;44m GET     [0m /gettag   r:/gettag
+2019/08/31 13:19:19.256 [I] [logs.go:37]  program start···
+2019/08/31 13:19:19.261 [I] [app.go:215]  http server Running on http://:8088
+2019/08/31 13:19:36.814 [D] [router.go:925]  |            ::1|[97;42m 200 [0m|   2.650235ms|   match|[97;44m GET     [0m /gettag   r:/gettag
+2019/08/31 13:20:14.345 [I] [logs.go:37]  program start···
+2019/08/31 13:20:14.350 [I] [app.go:215]  http server Running on http://:8088
+2019/08/31 13:20:36.077 [I] [logs.go:37]  program start···
+2019/08/31 13:20:36.083 [I] [app.go:215]  http server Running on http://:8088
+2019/08/31 13:20:55.407 [D] [router.go:925]  |            ::1|[97;42m 200 [0m|   1.249075ms|   match|[97;46m POST    [0m /settag   r:/settag
+2019/08/31 13:21:01.498 [D] [router.go:925]  |            ::1|[97;42m 200 [0m|    507.312µs|   match|[97;46m POST    [0m /settag   r:/settag
+2019/08/31 13:21:47.936 [I] [logs.go:37]  program start···
+2019/08/31 13:21:47.942 [I] [app.go:215]  http server Running on http://:8088
+2019/08/31 13:22:21.432 [D] [router.go:925]  |            ::1|[97;42m 200 [0m|   2.825145ms|   match|[97;44m GET     [0m /gettag   r:/gettag
+2019/08/31 13:22:29.079 [D] [router.go:925]  |            ::1|[97;42m 200 [0m|  55.441909ms|   match|[97;46m POST    [0m /settag   r:/settag
+2019/08/31 13:22:31.029 [D] [router.go:925]  |            ::1|[97;42m 200 [0m|    800.572µs|   match|[97;46m POST    [0m /settag   r:/settag
+2019/08/31 13:23:42.829 [I] [logs.go:37]  program start···
+2019/08/31 13:23:42.835 [I] [app.go:215]  http server Running on http://:8088
+2019/08/31 13:24:10.634 [I] [logs.go:37]  program start···
+2019/08/31 13:24:10.639 [I] [app.go:215]  http server Running on http://:8088
+2019/08/31 13:24:24.602 [I] [logs.go:37]  program start···
+2019/08/31 13:24:24.608 [I] [app.go:215]  http server Running on http://:8088
+2019/08/31 13:25:07.854 [D] [router.go:925]  |            ::1|[97;42m 200 [0m|   1.263696ms|   match|[97;46m POST    [0m /settag   r:/settag
+2019/08/31 13:27:13.813 [I] [logs.go:37]  program start···
+2019/08/31 13:27:13.818 [I] [app.go:215]  http server Running on http://:8088
+2019/08/31 13:27:19.149 [D] [router.go:925]  |            ::1|[97;42m 200 [0m|    1.11055ms|   match|[97;46m POST    [0m /settag   r:/settag
+2019/08/31 13:28:42.162 [D] [router.go:925]  |            ::1|[97;42m 200 [0m|    511.456µs|   match|[97;46m POST    [0m /settag   r:/settag
+2019/08/31 13:29:35.913 [I] [logs.go:37]  program start···
+2019/08/31 13:29:35.918 [I] [app.go:215]  http server Running on http://:8088
+2019/08/31 13:29:41.774 [D] [router.go:925]  |            ::1|[97;42m 200 [0m|   2.212672ms|   match|[97;46m POST    [0m /settag   r:/settag
+2019/08/31 13:32:10.829 [I] [logs.go:37]  program start···
+2019/08/31 13:32:10.835 [I] [app.go:215]  http server Running on http://:8088
+2019/08/31 13:32:15.181 [C] [config.go:176]  the request url is  /settag
+2019/08/31 13:32:15.181 [C] [config.go:177]  Handler crashed with error runtime error: invalid memory address or nil pointer dereference
+2019/08/31 13:32:15.181 [C] [config.go:183]  /usr/local/go/src/runtime/panic.go:522
+2019/08/31 13:32:15.181 [C] [config.go:183]  /usr/local/go/src/runtime/panic.go:82
+2019/08/31 13:32:15.181 [C] [config.go:183]  /usr/local/go/src/runtime/signal_unix.go:390
+2019/08/31 13:32:15.181 [C] [config.go:183]  /usr/local/gopath/src/go_demo/models/tag.go:44
+2019/08/31 13:32:15.181 [C] [config.go:183]  /usr/local/gopath/src/go_demo/services/tag.go:12
+2019/08/31 13:32:15.181 [C] [config.go:183]  /usr/local/gopath/src/go_demo/controllers/tag.go:43
+2019/08/31 13:32:15.181 [C] [config.go:183]  /usr/local/go/src/reflect/value.go:447
+2019/08/31 13:32:15.181 [C] [config.go:183]  /usr/local/go/src/reflect/value.go:308
+2019/08/31 13:32:15.181 [C] [config.go:183]  /usr/local/gopath/src/github.com/astaxie/beego/router.go:853
+2019/08/31 13:32:15.181 [C] [config.go:183]  /usr/local/go/src/net/http/server.go:2774
+2019/08/31 13:32:15.181 [C] [config.go:183]  /usr/local/go/src/net/http/server.go:1878
+2019/08/31 13:32:15.181 [C] [config.go:183]  /usr/local/go/src/runtime/asm_amd64.s:1337
+2019/08/31 13:32:15.181 [log.go:179]  [HTTP] http: superfluous response.WriteHeader call from github.com/astaxie/beego/context.(*Response).WriteHeader (context.go:230)
+2019/08/31 13:33:07.962 [I] [logs.go:37]  program start···
+2019/08/31 13:33:07.969 [I] [app.go:215]  http server Running on http://:8088
+2019/08/31 13:33:16.096 [D] [router.go:925]  |            ::1|[97;42m 200 [0m|   2.042464ms|   match|[97;46m POST    [0m /settag   r:/settag
+2019/08/31 13:33:54.130 [I] [logs.go:37]  program start···
+2019/08/31 13:33:54.135 [I] [app.go:215]  http server Running on http://:8088
+2019/08/31 13:34:15.614 [D] [router.go:925]  |            ::1|[97;42m 200 [0m|  97.319999ms|   match|[97;46m POST    [0m /settag   r:/settag
+2019/08/31 13:34:32.486 [D] [router.go:925]  |            ::1|[97;42m 200 [0m| 150.786632ms|   match|[97;46m POST    [0m /settag   r:/settag
+2019/08/31 13:34:41.378 [D] [router.go:925]  |            ::1|[97;42m 200 [0m|  91.321628ms|   match|[97;46m POST    [0m /settag   r:/settag
+2019/08/31 13:34:48.012 [D] [router.go:925]  |            ::1|[97;42m 200 [0m|    935.499µs|   match|[97;44m GET     [0m /gettag   r:/gettag
+2019/08/31 13:34:49.130 [D] [router.go:925]  |            ::1|[97;42m 200 [0m|     639.02µs|   match|[97;44m GET     [0m /gettag   r:/gettag
+2019/08/31 13:35:12.721 [I] [logs.go:37]  program start···
+2019/08/31 13:35:12.727 [I] [app.go:215]  http server Running on http://:8088
+2019/08/31 13:35:43.040 [I] [logs.go:37]  program start···
+2019/08/31 13:35:43.045 [I] [app.go:215]  http server Running on http://:8088
+2019/08/31 13:35:45.604 [D] [router.go:925]  |            ::1|[97;42m 200 [0m|   2.041319ms|   match|[97;44m GET     [0m /gettag   r:/gettag
+2019/08/31 13:38:04.228 [I] [logs.go:37]  program start···
+2019/08/31 13:38:04.234 [I] [app.go:215]  http server Running on http://:8088
+2019/08/31 13:38:06.569 [D] [router.go:925]  |            ::1|[97;42m 200 [0m|   3.522796ms|   match|[97;44m GET     [0m /gettag   r:/gettag
+2019/08/31 13:38:40.929 [I] [logs.go:37]  program start···
+2019/08/31 13:38:40.934 [I] [app.go:215]  http server Running on http://:8088
+2019/08/31 13:38:43.500 [D] [router.go:925]  |            ::1|[97;42m 200 [0m|    1.51362ms|   match|[97;44m GET     [0m /gettag   r:/gettag
+2019/08/31 13:39:01.330 [I] [logs.go:37]  program start···
+2019/08/31 13:39:01.335 [I] [app.go:215]  http server Running on http://:8088
+2019/08/31 13:39:03.631 [D] [router.go:925]  |            ::1|[97;42m 200 [0m|   2.999848ms|   match|[97;44m GET     [0m /gettag   r:/gettag
+2019/08/31 13:39:55.662 [I] [logs.go:37]  program start···
+2019/08/31 13:39:55.667 [I] [app.go:215]  http server Running on http://:8088
+2019/08/31 13:39:57.777 [D] [router.go:925]  |            ::1|[97;42m 200 [0m|   2.204434ms|   match|[97;44m GET     [0m /gettag   r:/gettag
+2019/08/31 13:40:04.109 [D] [router.go:925]  |            ::1|[97;42m 200 [0m|    877.997µs|   match|[97;44m GET     [0m /gettag   r:/gettag
+2019/08/31 13:40:16.745 [I] [logs.go:37]  program start···
+2019/08/31 13:40:16.751 [I] [app.go:215]  http server Running on http://:8088
+2019/08/31 13:40:46.551 [I] [logs.go:37]  program start···
+2019/08/31 13:40:46.556 [I] [app.go:215]  http server Running on http://:8088
+2019/08/31 13:40:49.068 [D] [router.go:925]  |            ::1|[97;42m 200 [0m|   1.817374ms|   match|[97;44m GET     [0m /gettag   r:/gettag
+2019/08/31 13:41:04.458 [I] [logs.go:37]  program start···
+2019/08/31 13:41:04.463 [I] [app.go:215]  http server Running on http://:8088
+2019/08/31 13:41:07.344 [D] [router.go:925]  |            ::1|[97;42m 200 [0m|   1.530388ms|   match|[97;44m GET     [0m /gettag   r:/gettag
+2019/08/31 13:41:24.801 [I] [logs.go:37]  program start···
+2019/08/31 13:41:24.807 [I] [app.go:215]  http server Running on http://:8088
+2019/08/31 13:41:30.453 [D] [router.go:925]  |            ::1|[97;42m 200 [0m|   1.504597ms|   match|[97;44m GET     [0m /gettag   r:/gettag
+2019/08/31 13:42:02.491 [I] [logs.go:37]  program start···
+2019/08/31 13:42:02.496 [I] [app.go:215]  http server Running on http://:8088
+2019/08/31 13:42:31.632 [I] [logs.go:37]  program start···
+2019/08/31 13:42:31.637 [I] [app.go:215]  http server Running on http://:8088
+2019/08/31 13:42:34.311 [D] [router.go:925]  |            ::1|[97;42m 200 [0m|   2.316397ms|   match|[97;44m GET     [0m /gettag   r:/gettag
+2019/08/31 13:45:03.273 [I] [logs.go:37]  program start···
+2019/08/31 13:45:03.278 [I] [app.go:215]  http server Running on http://:8088
+2019/08/31 13:45:06.894 [D] [router.go:925]  |            ::1|[97;42m 200 [0m|   2.329567ms|   match|[97;44m GET     [0m /gettag   r:/gettag
+2019/08/31 13:46:29.247 [I] [logs.go:37]  program start···
+2019/08/31 13:46:29.252 [I] [app.go:215]  http server Running on http://:8088
+2019/08/31 13:46:31.984 [D] [router.go:925]  |            ::1|[97;42m 200 [0m|   1.654628ms|   match|[97;44m GET     [0m /gettag   r:/gettag
+2019/08/31 13:46:32.533 [D] [router.go:925]  |            ::1|[97;42m 200 [0m|    757.207µs|   match|[97;44m GET     [0m /gettag   r:/gettag
+2019/08/31 13:46:33.038 [D] [router.go:925]  |            ::1|[97;42m 200 [0m|   1.156913ms|   match|[97;44m GET     [0m /gettag   r:/gettag
+2019/08/31 13:47:00.068 [I] [logs.go:37]  program start···
+2019/08/31 13:47:00.074 [I] [app.go:215]  http server Running on http://:8088
+2019/08/31 13:47:02.184 [D] [router.go:925]  |            ::1|[97;42m 200 [0m|   2.471053ms|   match|[97;44m GET     [0m /gettag   r:/gettag
+2019/08/31 13:47:21.690 [I] [logs.go:37]  program start···
+2019/08/31 13:47:21.696 [I] [app.go:215]  http server Running on http://:8088
+2019/08/31 13:47:24.122 [D] [router.go:925]  |            ::1|[97;42m 200 [0m|   1.361645ms|   match|[97;44m GET     [0m /gettag   r:/gettag
+2019/08/31 13:47:26.918 [D] [router.go:925]  |            ::1|[97;42m 200 [0m|    746.644µs|   match|[97;44m GET     [0m /gettag   r:/gettag
+2019/08/31 13:47:34.025 [D] [router.go:925]  |            ::1|[97;43m 404 [0m|    218.156µs| nomatch|[97;44m GET     [0m /getalldad
+2019/08/31 13:47:41.915 [D] [router.go:925]  |            ::1|[97;43m 404 [0m|    233.143µs| nomatch|[97;44m GET     [0m /getalld
+2019/08/31 13:47:45.803 [D] [log.go:115]  AuthString: eyJhbGciOiJIUzI1NiIsInR5cCI6IkpXVCJ9.eyJleHAiOjE1NjUxNDUzMDQsInVzZXJuYW1lIjoibHBmIn0.MN2sLfOAGB_odNuiVneKTqVG9drEJR-fHdQfR-sa6DU 
+2019/08/31 13:47:45.803 [D] [log.go:115]  Token: &{eyJhbGciOiJIUzI1NiIsInR5cCI6IkpXVCJ9.eyJleHAiOjE1NjUxNDUzMDQsInVzZXJuYW1lIjoibHBmIn0.MN2sLfOAGB_odNuiVneKTqVG9drEJR-fHdQfR-sa6DU 0xc00018b0a0 map[alg:HS256 typ:JWT] map[exp:1.565145304e+09 username:lpf] MN2sLfOAGB_odNuiVneKTqVG9drEJR-fHdQfR-sa6DU false} 
+2019/08/31 13:47:45.803 [D] [router.go:925]  |            ::1|[97;42m 200 [0m|    152.187µs|   match|[97;44m GET     [0m /getall   r:/getall
+2019/08/31 13:47:52.747 [D] [router.go:925]  |            ::1|[97;42m 200 [0m|    710.591µs|   match|[97;44m GET     [0m /gettag   r:/gettag
+2019/08/31 13:48:54.256 [I] [logs.go:37]  program start···
+2019/08/31 13:48:54.262 [I] [app.go:215]  http server Running on http://:8088
+2019/08/31 13:49:05.943 [D] [router.go:925]  |            ::1|[97;42m 200 [0m|   2.909613ms|   match|[97;44m GET     [0m /gettag   r:/gettag
+2019/08/31 13:49:06.636 [D] [router.go:925]  |            ::1|[97;42m 200 [0m|    982.077µs|   match|[97;44m GET     [0m /gettag   r:/gettag
+2019/08/31 13:50:04.421 [I] [logs.go:37]  program start···
+2019/08/31 13:50:04.426 [I] [app.go:215]  http server Running on http://:8088
+2019/08/31 13:50:08.037 [D] [router.go:925]  |      127.0.0.1|[97;42m 200 [0m|   1.927423ms|   match|[97;44m GET     [0m /getallarticle   r:/getallarticle
+2019/08/31 13:50:25.348 [I] [logs.go:37]  program start···
+2019/08/31 13:50:25.354 [I] [app.go:215]  http server Running on http://:8088
+2019/08/31 13:51:26.003 [D] [router.go:925]  |            ::1|[97;42m 200 [0m|   1.313418ms|   match|[97;44m GET     [0m /gettag   r:/gettag
+2019/08/31 13:52:46.197 [I] [logs.go:37]  program start···
+2019/08/31 13:52:46.202 [I] [app.go:215]  http server Running on http://:8088
+2019/08/31 13:53:10.547 [I] [logs.go:37]  program start···
+2019/08/31 13:53:10.552 [I] [app.go:215]  http server Running on http://:8088
+2019/08/31 13:53:14.146 [D] [router.go:925]  |            ::1|[97;42m 200 [0m|   1.220676ms|   match|[97;44m GET     [0m /gettag   r:/gettag
+2019/08/31 13:55:27.364 [I] [logs.go:37]  program start···
+2019/08/31 13:55:27.369 [I] [app.go:215]  http server Running on http://:8088
+2019/08/31 14:07:08.132 [D] [router.go:925]  |      127.0.0.1|[97;42m 200 [0m|    1.05916ms|   match|[97;44m GET     [0m /getallarticle   r:/getallarticle
+2019/08/31 14:07:11.034 [D] [router.go:925]  |            ::1|[97;42m 200 [0m|   1.210998ms|   match|[97;44m GET     [0m /gettag   r:/gettag
+2019/08/31 14:07:40.540 [I] [logs.go:37]  program start···
+2019/08/31 14:07:40.546 [I] [app.go:215]  http server Running on http://:8088
+2019/08/31 14:07:42.325 [D] [router.go:925]  |            ::1|[97;42m 200 [0m|   1.601823ms|   match|[97;44m GET     [0m /gettag   r:/gettag
+2019/08/31 14:08:34.498 [I] [logs.go:37]  program start···
+2019/08/31 14:08:34.503 [I] [app.go:215]  http server Running on http://:8088
+2019/08/31 14:08:37.576 [D] [router.go:925]  |            ::1|[97;42m 200 [0m|   1.169674ms|   match|[97;44m GET     [0m /gettag   r:/gettag
+2019/08/31 14:09:14.365 [I] [logs.go:37]  program start···
+2019/08/31 14:09:14.370 [I] [app.go:215]  http server Running on http://:8088
+2019/08/31 14:09:25.117 [I] [logs.go:37]  program start···
+2019/08/31 14:09:25.123 [I] [app.go:215]  http server Running on http://:8088
+2019/08/31 14:09:27.170 [D] [router.go:925]  |            ::1|[97;42m 200 [0m|   1.447579ms|   match|[97;44m GET     [0m /gettag   r:/gettag
+2019/08/31 14:10:08.337 [I] [logs.go:37]  program start···
+2019/08/31 14:10:08.342 [I] [app.go:215]  http server Running on http://:8088
+2019/08/31 14:10:15.400 [D] [router.go:925]  |            ::1|[97;42m 200 [0m|    2.24903ms|   match|[97;44m GET     [0m /gettag   r:/gettag
+2019/08/31 14:10:28.784 [D] [router.go:925]  |            ::1|[97;42m 200 [0m|   1.159869ms|   match|[97;44m GET     [0m /gettag   r:/gettag
+2019/08/31 14:10:51.421 [I] [logs.go:37]  program start···
+2019/08/31 14:10:51.426 [I] [app.go:215]  http server Running on http://:8088
+2019/08/31 14:10:58.516 [D] [router.go:925]  |            ::1|[97;42m 200 [0m|   1.142501ms|   match|[97;44m GET     [0m /gettag   r:/gettag
+2019/08/31 14:11:06.663 [D] [router.go:925]  |            ::1|[97;42m 200 [0m|    756.631µs|   match|[97;44m GET     [0m /gettag   r:/gettag
+2019/08/31 14:11:42.862 [D] [router.go:925]  |            ::1|[97;42m 200 [0m|    574.976µs|   match|[97;44m GET     [0m /gettag   r:/gettag
+2019/08/31 14:12:09.336 [D] [router.go:925]  |            ::1|[97;42m 200 [0m|   1.005921ms|   match|[97;44m GET     [0m /gettag   r:/gettag

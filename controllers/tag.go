@@ -14,6 +14,8 @@ type TagController struct {
 
 func (this *TagController) GetTag() {
 	token := this.Ctx.Input.Header("token")
+	this.Ctx.Output.Header("Access-Control-Allow-Origin", "*")
+	this.Ctx.Output.Header("Access-Control-Allow-Method", "*")
 	response := make(map[string]interface{})
 	fmt.Println(token)
 	if len(token) == 0 {
@@ -21,13 +23,12 @@ func (this *TagController) GetTag() {
 	}
 	content, err := services.GetTag()
 	if err != nil {
-		response["msg"] = err
+		// response["msg"] = err
 	}
-	response["msg"] = content
 	response["code"] = "200"
+	response["msg"] = content
 	this.Data["json"] = response
 	this.ServeJSON()
-	return
 }
 func (this *TagController) SetTag() {
 	var requestBody map[string]string
@@ -36,7 +37,6 @@ func (this *TagController) SetTag() {
 	content := requestBody["content"]
 	link := requestBody["link"]
 	token := this.Ctx.Input.Header("token")
-	fmt.Println(token)
 	if len(token) == 0 {
 		response["msg"] = "没有权限"
 	}

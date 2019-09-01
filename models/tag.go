@@ -7,11 +7,11 @@ import (
 )
 
 type Link struct {
-	ID      string `orm:"pk"`
+	ID      int `orm:"column(id);auto" description:"id"`
 	Content string
 }
 type Message struct {
-	ID      string `orm:"pk"`
+	ID      int `orm:"column(id);auto" description:"id"`
 	Content string
 }
 type Tag struct {
@@ -22,7 +22,7 @@ type Tag struct {
 func init() {
 	orm.RegisterModel(new(Link), new(Message))
 }
-func GetTag() (*Tag, error) {
+func GetTag() (Tag, error) {
 	o := orm.NewOrm()
 	var link []Link
 	var message []Message
@@ -30,21 +30,25 @@ func GetTag() (*Tag, error) {
 	db := o.QueryTable("message")
 	_, err := qs.All(&link)
 	_, errs := db.All(&message)
+	var tag Tag
 	if errs != nil {
-		return nil, nil
+		return tag, nil
 	}
-	tag := &Tag{link, message}
+	tag.link = link
+	tag.message = message
 	return tag, err
 }
 func SetTag(content string, link string) bool {
 	o := orm.NewOrm()
-	links := &Link{Content: link}
-	message := &Message{Content: content}
-	fmt.Println(links, message)
+	var links Link
+	var message Message
+	links.Content = link
+	message.Content = content
+	//message := &Message{Content: content}
 	// o.Insert(links)
 	// o.Insert(message)
-	id, err := o.Insert(links)
-	ids, errs := o.Insert(message)
+	id, err := o.Insert(&links)
+	ids, errs := o.Insert(&message)
 	fmt.Println(id, ids, err, errs)
 	return true
 }
