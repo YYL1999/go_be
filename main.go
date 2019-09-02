@@ -15,6 +15,7 @@ func init() {
 	orm.RunSyncdb("default", false, true)
 
 }
+
 func main() {
 	orm.Debug = true
 	o := orm.NewOrm()
