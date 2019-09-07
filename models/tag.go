@@ -8,6 +8,7 @@ import (
 
 type Link struct {
 	ID      int `orm:"column(id);auto" description:"id"`
+	Url     string
 	Content string
 }
 type Message struct {
