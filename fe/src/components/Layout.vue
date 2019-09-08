@@ -5,7 +5,7 @@
         class="side-link"
         v-for="(val, idx) in sideBarList"
         :key="idx"
-        :to="`/${val.path}`"
+        :to="`/manage/${val.path}`"
       >
         <span>{{val.name}}</span>
       </router-link>
@@ -235,11 +235,12 @@ export default {
 }
 .side {
   width: 160px;
-  background-color: gray;
+  background-color: #fff;
   height: 100vh;
-    font-size: 14px;
+  font-size: 22px;
   position: absolute;
   left: -160px;
+  color: #bababa;
   top: 0;
   .brand {
     display: flex;

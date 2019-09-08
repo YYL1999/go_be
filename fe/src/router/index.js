@@ -21,8 +21,20 @@ export default new Router ({
              component:loadView('article')
         },
         {
+             path:'/login',
+             name:"login",
+             component:loadView('login')
+        },
+        {
             path:'/manage',
-            component:loadView('manage/index')
+            component:loadView('manage/index'),
+            children:[
+                {
+                    path:'/manage/upload',
+                    name:"upload",
+                    component:loadView('manage/upload')
+                }
+            ]
         },
         {
             path:'/notfound',
