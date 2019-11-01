@@ -573,3 +573,23 @@
 2019/09/02 19:26:18.006 [I] [app.go:215]  http server Running on http://:8088
 2019/09/02 19:26:37.697 [I] [logs.go:37]  program start···
 2019/09/02 19:26:37.702 [I] [app.go:215]  http server Running on http://:8088
+2019/11/01 18:01:39.695 [I] [logs.go:37]  program start···
+2019/11/01 18:01:39.722 [I] [app.go:215]  http server Running on http://:8088
+2019/11/01 18:03:19.886 [D] [router.go:925]  |      127.0.0.1|[97;42m 200 [0m| 1.033159593s|   match|[97;44m GET     [0m /getallarticle   r:/getallarticle
+2019/11/01 18:03:32.817 [D] [router.go:925]  |      127.0.0.1|[97;42m 200 [0m| 488.052738ms|   match|[97;44m GET     [0m /getarticle/1   r:/getarticle/?:id
+2019/11/01 18:03:35.388 [D] [router.go:925]  |      127.0.0.1|[97;42m 200 [0m|     903.59µs|   match|[97;44m GET     [0m /getallarticle   r:/getallarticle
+2019/11/01 18:03:40.208 [D] [router.go:925]  |      127.0.0.1|[97;42m 200 [0m|    441.001µs|   match|[97;44m GET     [0m /getarticle/124   r:/getarticle/?:id
+2019/11/01 18:03:42.686 [D] [router.go:925]  |      127.0.0.1|[97;42m 200 [0m|   2.629603ms|   match|[97;44m GET     [0m /getallarticle   r:/getallarticle
+2019/11/01 18:03:44.573 [D] [router.go:925]  |      127.0.0.1|[97;42m 200 [0m|    768.064µs|   match|[97;44m GET     [0m /getarticle/127   r:/getarticle/?:id
+2019/11/01 18:03:53.708 [D] [router.go:925]  |      127.0.0.1|[97;42m 200 [0m|    934.953µs|   match|[97;44m GET     [0m /getallarticle   r:/getallarticle
+2019/11/01 18:04:37.577 [D] [router.go:925]  |      127.0.0.1|[97;42m 200 [0m|    420.696µs|   match|[97;44m GET     [0m /getallarticle   r:/getallarticle
+2019/11/01 18:57:37.323 [D] [router.go:925]  |            ::1|[97;43m 405 [0m|    416.057µs|   match|[97;44m GET     [0m /login   r:/login
+2019/11/01 18:57:37.534 [D] [router.go:925]  |            ::1|[97;43m 404 [0m|  25.558498ms| nomatch|[97;44m GET     [0m /favicon.ico
+2019/11/01 19:48:10.211 [I] [logs.go:37]  program start···
+2019/11/01 19:48:10.234 [I] [app.go:215]  http server Running on http://:8088
+2019/11/01 19:56:30.023 [D] [router.go:925]  |            ::1|[97;43m 405 [0m|    100.839µs|   match|[97;44m GET     [0m /login   r:/login
+2019/11/01 19:56:31.953 [D] [router.go:925]  |            ::1|[97;43m 404 [0m|    513.415µs| nomatch|[97;44m GET     [0m /favicon.ico
+2019/11/01 19:56:34.864 [D] [router.go:925]  |            ::1|[97;43m 404 [0m|    195.736µs| nomatch|[97;44m GET     [0m /  
+2019/11/01 20:07:37.943 [D] [router.go:925]  |      127.0.0.1|[97;42m 200 [0m|  70.880674ms|   match|[97;44m GET     [0m /getallarticle   r:/getallarticle
+2019/11/01 20:07:41.853 [D] [router.go:925]  |      127.0.0.1|[97;42m 200 [0m|    576.375µs|   match|[97;44m GET     [0m /getallarticle   r:/getallarticle
+2019/11/01 20:07:42.948 [D] [router.go:925]  |      127.0.0.1|[97;42m 200 [0m|   3.555284ms|   match|[97;44m GET     [0m /getarticle/1   r:/getarticle/?:id
